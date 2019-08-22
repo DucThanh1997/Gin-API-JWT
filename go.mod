@@ -5,6 +5,8 @@ go 1.12
 require (
 	cloud.google.com/go v0.44.3 // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20190806190131-db2462fef53b // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/fatih/vim-go v1.7.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/gin-gonic/gin v1.4.0
 	github.com/go-redis/redis v6.15.2+incompatible // indirect

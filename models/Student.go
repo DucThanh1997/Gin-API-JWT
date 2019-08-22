@@ -1,7 +1,7 @@
 package Models
 
 import (
-	"../Config"
+	"Gin-API-JWT/Config"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -22,6 +22,14 @@ func AddNewStudent(b *Student) (err error) {
 
 func GetOneStudent(b *Student, id string) (err error) {
 	if err := Config.DB.Where("id = ?", id).First(b).Error; err != nil {
+		return err
+	}
+	return nil
+}
+
+func GetOneStudentByName(b *Student, name string) (err error,) {
+	if err := Config.DB.Where("username = ?", name).First(b).Error; err != nil {
+		
 		return err
 	}
 	return nil

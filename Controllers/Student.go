@@ -1,9 +1,13 @@
 package Controllers
 
 import (
-	"../ApiHelpers"
-	"../Models"
+	"Gin-API-JWT/ApiHelpers"
+	"Gin-API-JWT/Models"
 	"github.com/gin-gonic/gin"
+	// "github.com/dgrijalva/jwt-go"
+	// "fmt"
+	// "time"
+	// "go-jwt/constants"
 )
 
 func ListStudent(c *gin.Context) {
@@ -17,7 +21,7 @@ func ListStudent(c *gin.Context) {
 }
 
 func AddNewStudent(c *gin.Context) {
-	var student Models.Student{name: c.PostForm("name"), age: c.PostForm("age")}
+	var student Models.Student
 	c.BindJSON(&student)
 	err := Models.AddNewStudent(&student)
 	if err != nil {

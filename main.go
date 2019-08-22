@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./Config"
-	"./Models"
-	"./Routers"
+	"Gin-API-JWT/Config"
+	"Gin-API-JWT/Models"
+	"Gin-API-JWT/Routers"
 	"fmt"
 	"github.com/jinzhu/gorm"
 )
